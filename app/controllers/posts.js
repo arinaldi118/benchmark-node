@@ -12,6 +12,6 @@ exports.getPost = (req, res, next) => {
 
 exports.getPosts = (_, res, next) =>
   postsServices
-    .getUsers()
+    .getPosts()
     .then(posts => res.status(200).send({ posts }))
     .catch(next);

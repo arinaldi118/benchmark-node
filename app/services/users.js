@@ -10,7 +10,7 @@ exports.getUserWithPosts = id =>
   users
     .findOne({
       where: { id },
-      includes: [{ model: posts }]
+      include: [{ model: posts }]
     })
     .catch(err => {
       throw errors.databaseError(err.message);
@@ -24,7 +24,7 @@ exports.getUsers = () =>
 exports.getUsersWithPosts = () =>
   users
     .findAll({
-      includes: [{ model: posts }]
+      include: [{ model: posts }]
     })
     .catch(err => {
       throw errors.databaseError(err.message);

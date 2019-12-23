@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       id: { type: DataTypes.INTEGER, allowNull: false, autoIncrement: true, primaryKey: true },
       userId: { type: DataTypes.INTEGER, allowNull: false },
       title: { type: DataTypes.STRING, allowNull: false },
-      content: { type: DataTypes.STRING, allowNull: false },
+      content: { type: DataTypes.TEXT, allowNull: false },
       upvotes: { type: DataTypes.INTEGER, allowNull: false },
       downvotes: { type: DataTypes.INTEGER, allowNull: false }
     },

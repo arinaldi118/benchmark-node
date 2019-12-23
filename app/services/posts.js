@@ -1,12 +1,12 @@
 const { posts } = require('../models');
 const errors = require('../errors');
 
-exports.post = id =>
+exports.getPost = id =>
   posts.findOne({ where: { id } }).catch(err => {
     throw errors.databaseError(err.message);
   });
 
-exports.posts = () =>
-  posts.findOne().catch(err => {
+exports.getPosts = () =>
+  posts.findAll().catch(err => {
     throw errors.databaseError(err.message);
   });

@@ -15,6 +15,8 @@ factory.extend('users', 'woloxUser', {
 });
 
 factory.extend('posts', 'woloxPost', {
+  title: factory.chance('sentence', { words: 5 }),
+  content: factory.chance('paragraph'),
   upvotes: factory.chance('natural', { max: 20 }),
   downvotes: factory.chance('natural', { max: 20 })
 });
@@ -25,10 +27,7 @@ describe('Some test', () => {
       const usersMapped = users.map(user => user.dataValues);
       console.log(usersMapped);
       Promise.all(
-        usersMapped.map(user => {
-          const cant = Math.round((Math.random() * 10) + 10);
-          return factory.createMany('woloxPost', cant, { userId: user.id });
-        })
+        usersMapped.map(user => factory.createMany('woloxPost', 20, { userId: user.id }))
       ).then(posts => {
         const postsMapped = posts.map(post => post.dataValues);
         console.log(postsMapped);
