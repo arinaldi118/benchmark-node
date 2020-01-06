@@ -1,1 +1,1 @@
-web: node server.js
+web: node --prof server.js
