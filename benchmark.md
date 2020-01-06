@@ -1,7 +1,7 @@
 ### Hosts
 
 * Host 1: Asus Intel© Core™ i3-7100U CPU @ 2.40GHz × 2  Ram: 11.6 GiB  Disco: SSD
-* Host 2: Lenovo Ram: 19 GiB  Disco: SSD
+* Host 2: Lenovo Intel© Core™ i7-8550U CPU @ 1.80GHz × 4 Ram: 19 GiB  Disco: SSD
 * Host 3: Heroku
 
 ### Prueba 1
@@ -47,6 +47,46 @@ Percentage of the requests served within a certain time (ms)
   98%     23
   99%     25
  100%     61 (longest request)
+```
+#### Host 2
+
+```
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /users
+Document Length:        3160 bytes
+
+Concurrency Level:      1
+Time taken for tests:   1.054 seconds
+Complete requests:      250
+Failed requests:        0
+Keep-Alive requests:    250
+Total transferred:      851750 bytes
+HTML transferred:       790000 bytes
+Requests per second:    237.27 [#/sec] (mean)
+Time per request:       4.215 [ms] (mean)
+Time per request:       4.215 [ms] (mean, across all concurrent requests)
+Transfer rate:          789.42 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:     2    4   2.5      4      35
+Waiting:        2    4   2.5      4      35
+Total:          2    4   2.5      4      35
+
+Percentage of the requests served within a certain time (ms)
+  50%      4
+  66%      4
+  75%      5
+  80%      5
+  90%      6
+  95%      7
+  98%      9
+  99%     12
+ 100%     35 (longest request)
 ```
 
 #### Host 3
@@ -140,6 +180,42 @@ Percentage of the requests served within a certain time (ms)
 #### Host 2
 
 ```
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /users
+Document Length:        3160 bytes
+
+Concurrency Level:      20
+Time taken for tests:   0.814 seconds
+Complete requests:      250
+Failed requests:        0
+Keep-Alive requests:    250
+Total transferred:      851750 bytes
+HTML transferred:       790000 bytes
+Requests per second:    307.09 [#/sec] (mean)
+Time per request:       65.127 [ms] (mean)
+Time per request:       3.256 [ms] (mean, across all concurrent requests)
+Transfer rate:          1021.74 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.2      0       1
+Processing:    29   64  13.1     63     123
+Waiting:       29   64  13.1     63     123
+Total:         29   64  13.2     63     123
+
+Percentage of the requests served within a certain time (ms)
+  50%     63
+  66%     65
+  75%     68
+  80%     69
+  90%     80
+  95%     86
+  98%    112
+  99%    122
+ 100%    123 (longest request)
 ```
 
 #### Host 3
@@ -234,6 +310,48 @@ Percentage of the requests served within a certain time (ms)
 #### Host 2
 
 ```
+Benchmarking localhost (be patient)
+Completed 100 requests
+Completed 200 requests
+Finished 250 requests
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /users_with_posts
+Document Length:        258456 bytes
+
+Concurrency Level:      1
+Time taken for tests:   6.102 seconds
+Complete requests:      250
+Failed requests:        0
+Keep-Alive requests:    250
+Total transferred:      64676750 bytes
+HTML transferred:       64614000 bytes
+Requests per second:    40.97 [#/sec] (mean)
+Time per request:       24.406 [ms] (mean)
+Time per request:       24.406 [ms] (mean, across all concurrent requests)
+Transfer rate:          10351.67 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:    17   24   6.9     22      86
+Waiting:       17   24   6.9     22      85
+Total:         17   24   6.9     22      86
+
+Percentage of the requests served within a certain time (ms)
+  50%     22
+  66%     25
+  75%     27
+  80%     28
+  90%     33
+  95%     35
+  98%     43
+  99%     47
+ 100%     86 (longest request)
 ```
 
 #### Host 3
@@ -290,6 +408,42 @@ Percentage of the requests served within a certain time (ms)
 #### Host 2
 
 ```
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /users_with_posts
+Document Length:        258456 bytes
+
+Concurrency Level:      20
+Time taken for tests:   5.834 seconds
+Complete requests:      250
+Failed requests:        0
+Keep-Alive requests:    250
+Total transferred:      64676750 bytes
+HTML transferred:       64614000 bytes
+Requests per second:    42.85 [#/sec] (mean)
+Time per request:       466.732 [ms] (mean)
+Time per request:       23.337 [ms] (mean, across all concurrent requests)
+Transfer rate:          10826.05 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.2      0       1
+Processing:   164  451  62.2    448     711
+Waiting:      164  451  62.2    448     711
+Total:        165  451  62.1    448     711
+
+Percentage of the requests served within a certain time (ms)
+  50%    448
+  66%    463
+  75%    467
+  80%    477
+  90%    520
+  95%    562
+  98%    613
+  99%    629
+ 100%    711 (longest request)
 ```
 
 #### Host 3
@@ -345,6 +499,42 @@ Percentage of the requests served within a certain time (ms)
 #### Host 2
 
 ```
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /users_with_posts/5
+Document Length:        12450 bytes
+
+Concurrency Level:      20
+Time taken for tests:   1.086 seconds
+Complete requests:      250
+Failed requests:        0
+Keep-Alive requests:    250
+Total transferred:      3174750 bytes
+HTML transferred:       3112500 bytes
+Requests per second:    230.28 [#/sec] (mean)
+Time per request:       86.850 [ms] (mean)
+Time per request:       4.343 [ms] (mean, across all concurrent requests)
+Transfer rate:          2855.80 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.2      0       1
+Processing:    39   86  20.2     81     169
+Waiting:       39   86  20.2     81     169
+Total:         39   86  20.3     81     169
+
+Percentage of the requests served within a certain time (ms)
+  50%     81
+  66%     88
+  75%     97
+  80%     99
+  90%    109
+  95%    121
+  98%    145
+  99%    160
+ 100%    169 (longest request)
 ```
 
 #### Host 3
